@@ -26,33 +26,42 @@ if ( is_user_logged_in() ) {
       echo removeEngStr(get_the_title());
       echo ' | ';
     } ?>
-    Meertens Instituut
+    Openjournals.nl
   </title>
-	<!-- <title><?php //the_title();?></title> -->
+
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.png">
 
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/meertens-style.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/ojs-style.css">
 
 </head>
 <body class="<?php echo $bodyClass ?>">
 
-	<div class="screenReaderMenu">
-    <a href="#main">skip to main content</a>
-  </div>
 
-  <nav class="mMainNavgation mMarginBottom" id="MainNavgation">
-    <?php
+  <div class="ojPageWrap">
 
-      $cleanMenu = wp_nav_menu( array(
-        //'menu_id' => 'my-custom-menu',
-        'echo' => false,
-        'depth'=> 2,
-      ) );
-      echo strip_tags($cleanMenu, "<a><ul><li>");
-      //echo $cleanMenu;
+    <div class="layoutHome inWrap">
+      <header class="ojHeader">
+        <div class="ojLogo">
+          <a href="oj-home.html" title="Go to homepage"><img src="<?php bloginfo('template_url'); ?>/images/logo-openjournals.png" alt=""></a>
+        </div>
 
-    ?>
-  </nav>
+        <div class="ojLang"><a href="">NL</a><a href="">EN</a></div>
+
+        <nav class="ojNav">
+          <?php
+
+            $cleanMenu = wp_nav_menu( array(
+              //'menu_id' => 'my-custom-menu',
+              'echo' => false,
+              'depth'=> 2,
+            ) );
+            echo strip_tags($cleanMenu, "<a><ul><li>");
+            //echo $cleanMenu;
+
+          ?>
+        </nav>
+
+      </header>
