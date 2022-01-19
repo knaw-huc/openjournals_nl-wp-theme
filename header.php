@@ -8,8 +8,6 @@
  *
  * @package Gutenbergtheme
  */
-
-
 ?>
 
 <?php
@@ -17,13 +15,18 @@ $bodyClass='';
 if ( is_user_logged_in() ) {
     $bodyClass = 'mLoggedin';
 	}
+
+$layoutClass = 'layoutPage';
+if ( is_home() ) {
+    $layoutClass = 'layoutHome';
+}
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
 	<title>
     <?php if ( !is_home() ) {
-      echo removeEngStr(get_the_title());
+      echo get_the_title();
       echo ' | ';
     } ?>
     Openjournals.nl
@@ -42,10 +45,10 @@ if ( is_user_logged_in() ) {
 
   <div class="ojPageWrap">
 
-    <div class="layoutHome inWrap">
+    <div class="<?php echo $layoutClass; ?> inWrap">
       <header class="ojHeader">
         <div class="ojLogo">
-          <a href="oj-home.html" title="Go to homepage"><img src="<?php bloginfo('template_url'); ?>/images/logo-openjournals.png" alt=""></a>
+          <a href="/" title="Go to homepage"><img src="<?php bloginfo('template_url'); ?>/images/logo-openjournals.png" alt=""></a>
         </div>
 
         <div class="ojLang"><a href="">NL</a><a href="">EN</a></div>
