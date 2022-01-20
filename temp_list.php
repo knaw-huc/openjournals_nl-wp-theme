@@ -1,3 +1,4 @@
+<?php /* Template Name: List */ ?>
 <?php get_header(); ?>
 
 
@@ -20,6 +21,16 @@
   <?php
   endif;
   ?>
+
+<ul class="itemsList">
+  <?php wp_reset_query(); query_posts( 'post_type=post' ); ?>
+  <?php while ( have_posts() ) : the_post(); ?>
+    <?php get_template_part( 'template-parts/content', 'list-news-item' ); ?>
+  <?php endwhile; ?>
+</ul>
+
+
+
   </main>
 
 
