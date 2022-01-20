@@ -229,5 +229,16 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 
+ function register_my_menus() {
+   register_nav_menus(
+     array(
+       'top-menu' => __( 'Main menu' ),
+			 'lang-menu' => __( 'Language menu' )
+     )
+   );
+ }
+ add_action( 'init', 'register_my_menus' );
+
+
 
 ?>

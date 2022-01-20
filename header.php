@@ -9,7 +9,15 @@
  * @package Gutenbergtheme
  */
 ?>
-
+<?php
+function transl($eng, $nl){
+  $out = $eng;
+  if (get_bloginfo('language') != 'en-GB') {
+    $out = $nl;
+  }
+  echo $out ;
+}
+?>
 <?php
 $bodyClass='';
 if ( is_user_logged_in() ) {
@@ -51,13 +59,24 @@ if ( is_home() ) {
           <a href="/" title="Go to homepage"><img src="<?php bloginfo('template_url'); ?>/images/logo-openjournals.png" alt=""></a>
         </div>
 
-        <div class="ojLang"><a href="">NL</a><a href="">EN</a></div>
+        <div class="ojLang">
+          <?php
+
+            $cleanMenuLang = wp_nav_menu( array(
+              'theme_location' => 'lang-menu',
+              'echo' => false,
+              'depth'=> 2,
+            ) );
+            echo strip_tags($cleanMenuLang, "<a>");
+            //echo $cleanMenu;
+
+          ?></div>
 
         <nav class="ojNav">
           <?php
 
             $cleanMenu = wp_nav_menu( array(
-              //'menu_id' => 'my-custom-menu',
+              'theme_location' => 'top-menu',
               'echo' => false,
               'depth'=> 2,
             ) );
