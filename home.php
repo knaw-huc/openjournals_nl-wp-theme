@@ -76,7 +76,7 @@
 
     <div class="ojJoin">
       <div class="joinBox">
-        <a href="/contact/">Join openjournals.nl</a>
+        <a href="/index.php/contact/">Join openjournals.nl</a>
       </div>
     </div>
   </div>
