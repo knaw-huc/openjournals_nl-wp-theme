@@ -194,6 +194,13 @@ a {
   grid-row: ttop/botttom;
 }
 
+input[type=submit] {
+  background-color: #F47F67;
+  border: 0px;
+  border-radius: 3px;
+  padding: 0.2rem 1rem;
+}
+
 .ojHeroText {
   display: flex;
   flex-direction: column;
