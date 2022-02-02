@@ -57,7 +57,7 @@
     </section>
 
     <section class="ojRightBar">
-      <div class="topLine">
+      <div class="topLine" style="height:780px;">
         <h2>Twitter</h2>
         <a class="twitter-timeline" data-height="700" href="https://twitter.com/openjournalsnl?ref_src=twsrc%5Etfw">Tweets by openjournalsnl</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
