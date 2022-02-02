@@ -137,7 +137,7 @@ a {
 @media (min-width: 1000px) {
   .layoutHome {
     grid-template-columns: [col1] minMax(300px, 600px) [col2] minMax(300px, 600px) [col3] minMax(200px, 300px) [buffer];
-    grid-template-rows: [ttop] 100px [headerr] 60px [hero] auto [cols] auto [botttom];
+    grid-template-rows: [ttop] 50px [headerr] 60px [hero] auto [cols] auto [botttom];
     column-gap: 40px;
   }
   .layoutHome .ojHeader {
@@ -173,7 +173,7 @@ a {
 .layoutPage {
   display: grid;
   grid-template-columns: [col1] minMax(0px, 780px) [fil] minMax(0px, 600px) [rightt];
-  grid-template-rows: [ttop] 100px [headerr] 60px [r1] auto [r2] auto [r3] auto [r4] auto [botttom];
+  grid-template-rows: [ttop] 50px [headerr] 60px [r1] auto [r2] auto [r3] auto [r4] auto [botttom];
   column-gap: 40px;
   min-height: 100vh;
 }
@@ -194,6 +194,10 @@ a {
   grid-row: ttop/botttom;
 }
 
+.layoutHome, .layoutPage {
+  padding-bottom: 6rem;
+}
+
 input[type=submit] {
   background-color: #F47F67;
   border: 0px;
@@ -206,7 +210,7 @@ input[type=submit] {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 @media (max-width: 400px) {
   .ojHeroText h1 {
