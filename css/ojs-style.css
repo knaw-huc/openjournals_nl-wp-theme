@@ -316,7 +316,7 @@ ul.itemsList h3 a {
 
 ul.itemsList li:hover {
   border-left: 4px solid #F47F67;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   margin-left: -0.5rem;
 }
 
