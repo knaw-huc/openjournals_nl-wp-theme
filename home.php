@@ -29,7 +29,7 @@
 
 
     <section class="ojJournals topLine">
-      <h2>Journals</h2>
+      <h2>Latest journals</h2>
       <ul class="itemsList">
 
 
