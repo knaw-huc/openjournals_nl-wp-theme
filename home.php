@@ -29,11 +29,22 @@
 
 
     <section class="ojJournals topLine">
-      <h2>Latest journals</h2>
+      <h2><?php transl( 'Our journals', 'Onze journals'); ?></h2>
       <ul class="itemsList">
 
+        <li class="journalItem incCard">
+          <div class="thumb">
+              <img src="<?php bloginfo('template_url'); ?>/images/logo-openjournals-square-color-DIAP-white.png" alt="">
+          </div>
+          <div class="text">
+            <h3><a href="/index.php/journals">All journals</a></h3>
+            <p>Openjournals hosts a diverse set of high-quality academic journals. Check out all of them.</p>
 
-        <?php query_posts( 'post_type=journal' ); ?>
+            <div>
+        </li>
+
+
+        <?php query_posts( 'post_type=journal&category_name=featured' ); ?>
         <?php while ( have_posts() ) : the_post(); ?>
 
 
@@ -45,7 +56,7 @@
           	}  ?>
             </div>
             <div class="text">
-              <h3><a href="<?php echo get_post_meta($post->ID, 'journal_url', true); ?>"><?php the_title(); ?></a></h3>
+              <h3><a href="<?php echo get_post_meta($post->ID, 'journal_url', true); ?>">New journal</a></h3>
               <?php the_content(); ?>
 
               <div>

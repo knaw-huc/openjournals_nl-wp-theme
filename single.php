@@ -22,6 +22,20 @@
   ?>
   </main>
 
+  <div class="ojMid">
+
+  </div>
+
+  <aside class="ojAsideBar">
+    <h2 class="ojTopLIne"><?php transl( 'More news', 'Meer nieuws'); ?></h2>
+    <ul class="itemsList">
+      <?php wp_reset_query(); query_posts( 'post_type=post' ); ?>
+      <?php while ( have_posts() ) : the_post(); ?>
+        <?php get_template_part( 'template-parts/content', 'list-news-item' ); ?>
+      <?php endwhile; ?>
+    </ul>
+  </aside>
+
 
 
   </div>
