@@ -24,10 +24,7 @@ if ( is_user_logged_in() ) {
     $bodyClass = 'mLoggedin';
 	}
 
-$layoutClass = 'layoutPage';
-if ( is_home() ) {
-    $layoutClass = 'layoutHome';
-}
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -53,7 +50,7 @@ if ( is_home() ) {
 
   <div class="ojPageWrap">
 
-    <div class="<?php echo $layoutClass; ?> inWrap">
+    <div class="ojsLayoutMain inWrap">
       <header class="ojHeader">
         <div class="ojLogo">
           <a href="/" title="Go to homepage"><img src="<?php bloginfo('template_url'); ?>/images/logo-openjournals.png" alt=""></a>

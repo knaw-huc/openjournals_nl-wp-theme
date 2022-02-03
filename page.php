@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
 
-
-<main class="ojMain">
+<div class="ojContent ojsLayoutMidCol">
+  <main class="ojMain">
 
   <?php
   if (have_posts()) :
@@ -21,6 +21,8 @@
   endif;
   ?>
   </main>
+
+</div>
 
 
 

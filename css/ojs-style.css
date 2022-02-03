@@ -170,36 +170,69 @@ a {
     column-gap: 70px;
   }
 }
-.layoutPage {
+.ojsLayoutMain {
   display: grid;
-  grid-template-columns: [col1] minMax(500px, 780px) [mid] minMax(0px, 400px) [fil] minMax(200px, 600px) [rightt];
-  grid-template-rows: [ttop] 50px [headerr] 60px [r1] auto [r2] auto [r3] auto [r4] auto [botttom];
+  grid-template-columns: [col1] auto [colEnd];
+  grid-template-rows: [ttop] 30px [headerr] 50px [r1] auto [r2] auto [botttom];
   column-gap: 40px;
   min-height: 100vh;
+  width: 100%;
 }
-.layoutPage .ojHeader {
-  grid-column: col1/buffer;
+.ojsLayoutMain .ojHeader {
+  grid-column: col1/colEnd;
   grid-row: headerr;
 }
-.layoutPage .ojMain {
-  grid-column: col1/mid;
+.ojsLayoutMain .ojHeroText, .ojsLayoutMain .ojWide {
+  grid-column: col1;
   grid-row: r1;
 }
-.layoutPage .ojMid {
-  grid-column: mid/fil;
+.ojsLayoutMain .ojContentHome {
+  grid-column: col1/colEnd;
+  grid-row: r2;
+}
+.ojsLayoutMain .ojContent {
+  grid-column: col1/colEnd;
   grid-row: r1;
 }
-.layoutPage .ojAsideBar {
-  grid-column: fil/rightt;
-  grid-row: r1;
+
+.ojsLayout3Col {
+  display: grid;
+  column-gap: 40px;
 }
-.layoutPage .ojWide {
-  grid-column: col1/buffer;
-  grid-row: r1/r3;
+
+@media (min-width: 1000px) {
+  .ojsLayout3Col {
+    grid-template-columns: [col1] minMax(300px, 600px) [col2] minMax(300px, 600px) [col3] minMax(200px, 300px) [buffer];
+    grid-template-rows: [cols] auto [botttom];
+    column-gap: 40px;
+  }
+  .ojsLayout3Col .ojNews, .ojsLayout3Col .ojMain {
+    grid-column: col1;
+    grid-row: cols;
+  }
+  .ojsLayout3Col .ojJournals {
+    grid-column: col2;
+    grid-row: cols;
+  }
+  .ojsLayout3Col .ojRightBar {
+    grid-column: col3;
+    grid-row: cols;
+  }
 }
-.layoutPage .ojColorBar {
-  grid-column: leftt;
-  grid-row: ttop/botttom;
+.ojsLayoutMidCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 40px;
+}
+.ojsLayoutMidCol > * {
+  max-width: 700px;
+  width: 100%;
+}
+
+h2 {
+  margin: 2rem 0 0.5rem 0;
 }
 
 .layoutHome, .layoutPage {
@@ -215,9 +248,9 @@ input[type=submit] {
 
 .ojHeroText {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   padding: 2rem 0;
 }
 @media (max-width: 400px) {

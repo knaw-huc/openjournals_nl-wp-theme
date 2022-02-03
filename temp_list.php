@@ -2,8 +2,8 @@
 <?php get_header(); ?>
 
 
-
-<main class="ojMain">
+<div class="ojContent ojsLayoutMidCol">
+<main class="ojNews">
 
   <?php
   if (have_posts()) :
@@ -33,7 +33,7 @@
 
   </main>
 
-
+</div>
 
 
   </div>
