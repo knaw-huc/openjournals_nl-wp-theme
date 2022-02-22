@@ -89,8 +89,10 @@
     </div>
     <div class="topLine">
       <h2>Partners</h2>
+      <a href="https://knaw.nl/"><img src="<?php bloginfo('template_url'); ?>/images/logo-KNAW.jpg" alt="Partner KNAW" class="ojLogoWide"></a>
+      <a href="https://www.nwo.nl/"><img src="<?php bloginfo('template_url'); ?>/images/logo-nwo.jpg" alt="Partner NWO" class="ojLogoPortait"></a>
+      <a href="https://oapus.nl/"><img src="<?php bloginfo('template_url'); ?>/images/logo-oapus.png" alt="Partner OPUS Foundation" class="ojLogoWide noMarg"></a>
     </div>
-
   </section>
 
 </div>

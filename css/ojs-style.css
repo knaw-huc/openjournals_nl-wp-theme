@@ -235,7 +235,8 @@ h2 {
   margin: 2rem 0 0.5rem 0;
 }
 
-.layoutHome, .layoutPage {
+.layoutHome,
+.layoutPage {
   padding-bottom: 6rem;
 }
 
@@ -329,6 +330,24 @@ input[type=submit] {
 .current_page_item {
   font-weight: bold;
   border-bottom: 4px solid #F47F67;
+}
+
+.ojLogoWide {
+  width: 100px;
+  height: auto;
+  margin-bottom: 3rem;
+  margin-right: 20px;
+}
+
+.ojLogoPortait {
+  width: auto;
+  height: 70px;
+  margin-bottom: 3rem;
+  margin-right: 20px;
+}
+
+.noMarg {
+  margin-right: 0px;
 }
 
 ul.itemsList {
