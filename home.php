@@ -52,7 +52,7 @@
       </li>
 
 
-      <?php query_posts( 'post_type=journal&category_name=featured' ); ?>
+      <?php query_posts( 'post_type=journal&category_name=featured,featured_nl' ); ?>
       <?php while ( have_posts() ) : the_post(); ?>
 
 
@@ -96,7 +96,6 @@
   </section>
 
 </div>
-
 
 
 
