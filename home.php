@@ -6,7 +6,7 @@
     $homeQuery = 'pagename=homepage&post_type=page';
     if (get_bloginfo('language') != 'en-GB') {
       $homeQuery = 'pagename=homepage&post_type=page';
-    } else {
+    } elseif (get_bloginfo('language') != 'nl-NL') {
       $homeQuery = 'pagename=homepage_nl&post_type=page';
     }
     query_posts( $homeQuery );
