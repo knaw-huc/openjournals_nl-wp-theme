@@ -2,7 +2,15 @@
 
 <main class="ojHeroText">
   <span>
-    <?php query_posts( 'pagename=homepage&post_type=page' ); ?>
+    <?php
+    $homeQuery = 'pagename=homepage&post_type=page';
+    if (get_bloginfo('language') != 'en-GB') {
+      $homeQuery = 'pagename=homepage&post_type=page';
+    } else {
+      $homeQuery = 'pagename=homepage_nl&post_type=page';
+    }
+    query_posts( $homeQuery );
+    ?>
     <?php while ( have_posts() ) : the_post(); ?>
       <?php the_content(); ?>
     <?php endwhile; ?>
