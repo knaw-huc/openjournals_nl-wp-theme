@@ -30,12 +30,40 @@
     <h2><?php transl( 'News', 'Nieuws'); ?></h2>
     <ul class="itemsList">
 
-      <?php query_posts( 'post_type=post' ); ?>
-      <?php while ( have_posts() ) : the_post(); ?>
+
+      <?php
+
+      wp_reset_query();
+
+      $args = array(
+          'post_type' => 'post',
+          'posts_per_page' => 10,
+          'paged' => 2,
+      );
+
+      $the_query = new WP_Query( $args );
+      if ( $the_query->have_posts() ) {
+
+      while ( have_posts() ) : the_post(); ?>
 
         <?php get_template_part( 'template-parts/content', 'list-news-item' ); ?>
 
-      <?php endwhile; ?>
+      <?php endwhile;
+      }; ?>
+
+
+      <?php // Pagination
+        $big = 999999999; // need an unlikely integer
+
+        $pagination =  paginate_links( array(
+            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+            'format' => '?paged=%#%',
+            'current' => max( 1, get_query_var('paged') ),
+            'prev_next' => false,
+            'total' => $the_query->max_num_pages
+        ) );
+        echo str_replace("/page/1/", "", $pagination) ; ?>
+
 
     </ul>
   </section>
