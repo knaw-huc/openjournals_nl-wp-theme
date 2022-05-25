@@ -72,7 +72,7 @@
           }  ?>
           </div>
           <div class="text">
-            <h3><a href="<?php echo get_post_meta($post->ID, 'journal_url', true); ?>"><?php transl( 'New journal', 'Nieuw journal'); ?></a></h3>
+            <h3><a href="<?php echo get_post_meta($post->ID, 'journal_url', true); ?>" target="_blank"><?php transl( 'New journal', 'Nieuw journal'); ?></a></h3>
             <?php the_content(); ?>
 
             <div>
