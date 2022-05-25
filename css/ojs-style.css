@@ -564,6 +564,6 @@ ul.itemsList li:hover {
   color: #2D2D2D;
 }
 
-.newsItem {
+.newsItem, .journalItem {
   cursor: pointer;
 }

@@ -92,7 +92,7 @@
       <?php while ( have_posts() ) : the_post(); ?>
 
 
-        <li class="journalItem incCard">
+        <li class="journalItem incCard" onclick="window.open('<?php echo get_post_meta($post->ID, 'journal_url', true); ?>', '_blank')" >
           <div class="thumb">
             <?php
             if ( has_post_thumbnail() ) {
