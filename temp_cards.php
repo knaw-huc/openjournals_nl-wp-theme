@@ -28,7 +28,7 @@
         <?php if ( has_post_thumbnail() ) {
           echo get_the_post_thumbnail( $post_id, 'medium' );
       }  ?>
-        <a href="<?php echo get_post_meta($post->ID, 'journal_url', true); ?>"><?php the_title(); ?></a>
+        <a href="<?php echo get_post_meta($post->ID, 'journal_url', true); ?>" target="_blank"><?php the_title(); ?></a>
       </div>
 
       <?php endwhile; ?>
