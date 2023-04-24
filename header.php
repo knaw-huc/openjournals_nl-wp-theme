@@ -43,6 +43,7 @@ if ( is_user_logged_in() ) {
 
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/ojs-style.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/ojs-style_add.css">
 
 </head>
 <body class="<?php echo $bodyClass ?>">
