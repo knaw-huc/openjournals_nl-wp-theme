@@ -26,10 +26,10 @@
   <?php wp_reset_query(); query_posts( 'post_type=journal&orderby=title&order=ASC' ); ?>
   <?php while ( have_posts() ) : the_post(); ?>
   <li class="itemListSlim" onclick="window.location.href='<?php the_permalink(); ?>'">
-    <div class="mCards__thumbnailSmall ttop">
+    <div class="ttop">
       <?php
       if ( has_post_thumbnail() ) {
-        echo get_the_post_thumbnail( $post->ID, 'thumbnail' );
+        echo get_the_post_thumbnail( $post->ID, 'medium' );
     } else {
       echo '<div class="noThumb">g</div>';
     } ?>
@@ -37,7 +37,6 @@
   
     <div class="text">
       <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-      <?php echo the_content() ?>
     </div>
   </li>
   <?php endwhile; ?>
