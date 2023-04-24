@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
 
-<div class="ojContent ojsLayoutMidCol">
+<div class="ojContent ojWide">
 <main class="ojNews">
 
   <?php
@@ -26,10 +26,10 @@
   <?php wp_reset_query(); query_posts( 'post_type=journal&orderby=title&order=ASC' ); ?>
   <?php while ( have_posts() ) : the_post(); ?>
   <li class="itemListSlim" onclick="window.location.href='<?php the_permalink(); ?>'">
-    <div class="ttop">
+  <div class="medThumb ttop">
       <?php
       if ( has_post_thumbnail() ) {
-        echo get_the_post_thumbnail( $post->ID, 'medium' );
+        echo get_the_post_thumbnail( $post->ID, array( 200, 300) );
     } else {
       echo '<div class="noThumb">g</div>';
     } ?>

@@ -20,8 +20,8 @@
   text-decoration: none;
 }
 
-.mCards__thumbnailMed {
-  width: 150px;
+.medThumb {
+  width: 200px;
   height: auto;
 }
 
