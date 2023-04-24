@@ -25,7 +25,7 @@
 <ul class="itemsList">
   <?php wp_reset_query(); query_posts( 'post_type=journal&orderby=title&order=ASC' ); ?>
   <?php while ( have_posts() ) : the_post(); ?>
-  <li class="itemListSlim" onclick="window.location.href='<?php the_permalink(); ?>'">
+  <li class="itemListSlim">
     <div class="medThumb ttop">
       <?php
       if ( has_post_thumbnail() ) {
@@ -36,8 +36,8 @@
     </div>
   
     <div class="text">
-      <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-      <?php echo the_content() ?>
+      <a href="<?php echo get_post_meta($post->ID, 'journal_url', true); ?>" target="_blank"><h3><?php the_title(); ?></h3>
+      <?php echo the_content() ?></a>
     </div>
   </li>
   <?php endwhile; ?>
