@@ -30,7 +30,7 @@
     <div class="facetItems">
       <button>Dutch</button>
       <button>English</button>
-      <button>France</button>
+      <button>French</button>
       <button>Italian</button>
     </div>
     </div>
