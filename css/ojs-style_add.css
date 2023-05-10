@@ -74,10 +74,24 @@
   max-width: 200px;
 }
 
+.facet {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: .8rem;
+  border-radius: 4px;
+  background-color: hsl(0, 0%, 95%);
+  margin-bottom: 2rem;
+}
+
+.facet strong{
+  margin-bottom: .5rem;
+}
+
 .facetItems{
   display: flex;
   flex-direction: column;
-  padding-bottom: 3rem;
+  
 }
 
 .facetItems button {
@@ -86,7 +100,6 @@
   padding: 0;
   width: auto;
   text-align: left;
-  font-size: 1rem;
   padding-bottom: .5rem;
   cursor: pointer;
 }

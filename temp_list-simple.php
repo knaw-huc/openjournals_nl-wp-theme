@@ -25,6 +25,7 @@
 
 <div class="facetLayout">
   <div class="facets">
+  <div class="facet">
     <strong>Language</strong>
     <div class="facetItems">
       <button>Dutch</button>
@@ -32,18 +33,23 @@
       <button>France</button>
       <button>Italian</button>
     </div>
+    </div>
 
+    <div class="facet">
     <strong>Category</strong>
     <div class="facetItems">
       <button>Education</button>
       <button>Language</button>
       <button>Health</button>
     </div>
+    </div>
 
+    <div class="facet">
     <strong>Order</strong>
     <div class="facetItems">
       <button>A-Z</button>
-      <button>Publication</button>
+      <button>Publication date</button>
+    </div>
     </div>
 
   </div>
