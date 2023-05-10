@@ -34,3 +34,59 @@
 .ttop {
   align-self: flex-start;
 }
+
+.hidden {
+  display: none;
+}
+
+.vis {
+  display: block;
+}
+
+.linkColor {
+  color: #1e47cc !important;
+}
+
+.mb1 {
+  margin-bottom: 1rem !important;
+}
+
+.mainTxt p:last-child {
+  margin-bottom: 0;
+}
+
+.bReadmore{
+  border: none;
+}
+
+.top1r {
+  margin-top: 1rem;
+}
+
+.facetLayout {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.facets {
+  width: 100%;
+  max-width: 200px;
+}
+
+.facetItems{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+
+.facetItems button {
+  border: none;
+  background:none ;
+  padding: 0;
+  width: auto;
+  text-align: left;
+  font-size: 1rem;
+  padding-bottom: .5rem;
+  cursor: pointer;
+}
