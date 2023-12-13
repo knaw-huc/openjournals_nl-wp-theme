@@ -99,13 +99,7 @@
       <h2>Twitter</h2>
       <a class="twitter-timeline" data-height="700" href="https://twitter.com/openjournalsnl?ref_src=twsrc%5Etfw">Tweets by openjournalsnl</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
-    <div class="topLine">
-      <h2><?php transl( 'Newsletter', 'Nieuwsbrief') ?></h2>
-      <?php wp_reset_query(); query_posts( 'pagename=newsletter_subscribtion&post_type=page' ); ?>
-      <?php while ( have_posts() ) : the_post(); ?>
-        <?php the_content(); ?>
-      <?php endwhile; ?>
-    </div>
+
     <div class="topLine">
       <h2>Partners</h2>
       <a href="https://knaw.nl/"><img src="<?php bloginfo('template_url'); ?>/images/logo-KNAW.jpg" alt="Partner KNAW" class="ojLogoWide"></a>
