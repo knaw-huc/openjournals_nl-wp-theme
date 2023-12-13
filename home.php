@@ -45,7 +45,7 @@
 
 
     </ul>
-    <div class="">
+    <div class="" style="margin-bottom:5rem">
       <a href="<?php transl( '/index.php/news/', 'index.php/nl/nieuws/'); ?>"><?php transl( 'More news', 'Meer nieuws'); ?></a>
     </div>
 
