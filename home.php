@@ -17,9 +17,11 @@
   </span>
 
   <div class="ojJoin">
-    <div class="joinBox">
-      <a href="/index.php/contact/">Join openjournals.nl</a>
-    </div>
+  <h2><?php transl( 'Newsletter', 'Nieuwsbrief') ?></h2>
+      <?php wp_reset_query(); query_posts( 'pagename=newsletter_subscribtion&post_type=page' ); ?>
+      <?php while ( have_posts() ) : the_post(); ?>
+        <?php the_content(); ?>
+      <?php endwhile; ?>
   </div>
 
 </main>
@@ -31,7 +33,7 @@
     <ul class="itemsList">
 
 
-      <?php query_posts( 'post_type=post&category_name=featured,featured_nl' ); ?>
+      <?php query_posts( 'post_type=post&category_name=featured,featured_nl&posts_per_page=3' ); ?>
       <?php while ( have_posts() ) : the_post(); ?>
 
         <?php get_template_part( 'template-parts/content', 'list-news-item' ); ?>
@@ -43,6 +45,10 @@
 
 
     </ul>
+    <div class="">
+      <a href="<?php transl( '/index.php/news/', 'index.php/nl/nieuws/'); ?>"><?php transl( 'More news', 'Meer nieuws'); ?></a>
+    </div>
+
   </section>
 
 
@@ -73,7 +79,7 @@
           <div class="thumb">
             <?php
             if ( has_post_thumbnail() ) {
-              echo get_the_post_thumbnail( $post_id, 'medium' );
+              echo get_the_post_thumbnail( $post->ID, 'medium' );
           }  ?>
           </div>
           <div class="text">
